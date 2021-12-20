@@ -2,7 +2,7 @@ const electron = require("electron");
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
-process.env.NODE_ENV = 'production';
+//process.env.NODE_ENV = 'production';
 
 let mainWindow;
 let addWindow;
@@ -12,8 +12,7 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
+      nodeIntegration: true
     }
   });
 
@@ -43,8 +42,7 @@ function createAddWindow() {
     height: 200,
     title: 'Add Shopping List Item',
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
+      nodeIntegration: true
     }
   });
 
